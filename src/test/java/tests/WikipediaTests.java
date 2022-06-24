@@ -1,22 +1,16 @@
 package tests;
 
-import com.codeborne.selenide.CollectionCondition;
-import io.appium.java_client.AppiumBy;
-import org.junit.jupiter.api.Test;
+import io.appium.java_client.MobileBy;
+//import io.appium.java_client.android.AndroidElement;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import java.io.IOException;
+import java.util.List;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import static com.codeborne.selenide.Selenide.*;
-import static io.qameta.allure.Allure.step;
 
-public class WikipediaTests {
-    @Test
-    void searchTest() {
-        back();
-        step("Type search", () -> {
-            $(AppiumBy.id("org.wikipedia.alpha:id/search_container")).click();
-            $(AppiumBy.id("org.wikipedia.alpha:id/search_src_text")).sendKeys("BrowserStack");
-        });
-        step("Verify content found", () ->
-                $$(AppiumBy.id("org.wikipedia.alpha:id/page_list_item_title"))
-                        .shouldHave(CollectionCondition.sizeGreaterThan(0)));
-    }
+
+public class WikipediaTests extends BrowserStackJUnitTest {
 }

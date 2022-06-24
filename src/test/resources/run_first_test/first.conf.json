@@ -1,0 +1,18 @@
+{
+  "server": "hub-cloud.browserstack.com",
+  "username": "bsuser_EgVqPB",
+  "access_key": "Ep1YKL4jfwWtLHd3V8jT",
+
+  "capabilities": {
+    "project": "First Junit5 Android Project",
+    "build": "Junit5 Android First",
+    "name": "first_test",
+    "browserstack.debug": true,
+    "app": "bs://461269d9f1f7b5140fc6ba88416d3cc312d53271"
+  },
+
+  "environments": [{
+    "device": "OnePlus OnePlus 8",
+    "os_version":  "10.0"
+  }]
+}
