@@ -1,56 +1,19 @@
 package tests.browserstack;
 
 import io.appium.java_client.MobileBy;
-import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
-import org.json.simple.parser.ParseException;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.io.File;
-import java.io.IOException;
-import java.net.URL;
 import java.util.List;
 
-import static drivers.AndroidBrowserstackDriver.initAndroidDriver;
-import static helpers.DriverSettings.setCapabilities;
 
 @Tag("android")
-public class AndroidSampleTest {
+public class AndroidSampleTest extends TestBase {
     @Test
-    void searchTest() throws IOException, InterruptedException, ParseException {
-        DesiredCapabilities caps = new DesiredCapabilities();
-
-        // Set your access credentials
-        caps.setCapability("browserstack.user", "bsuser_EgVqPB");
-        caps.setCapability("browserstack.key", "Ep1YKL4jfwWtLHd3V8jT");
-
-        // Set URL of the application under test
-        caps.setCapability("app", "bs://c700ce60cf13ae8ed97705a55b8e022f13c5827c");
-
-        // Specify device and os_version for testing
-        caps.setCapability("device", "Google Pixel 3");
-        caps.setCapability("os_version", "9.0");
-
-        // Set other BrowserStack capabilities
-        caps.setCapability("project", "First Java Project");
-        caps.setCapability("build", "browserstack-build-1");
-        caps.setCapability("name", "first_test");
-
-
-        // Initialise the remote Webdriver using BrowserStack remote URL
-        // and desired capabilities defined above
-        AndroidDriver<AndroidElement> driver = new AndroidDriver<AndroidElement>(
-                new URL("http://hub-cloud.browserstack.com/wd/hub"), caps);
-
-
-        // Initialise the remote Webdriver using BrowserStack remote URL
-        // and desired capabilities defined above
-//        AndroidDriver<AndroidElement> driver = initAndroidDriver(setCapabilities());
-
+    void searchTest() throws  InterruptedException {
 
         // Test case for the BrowserStack sample Android app.
         // If you have uploaded your app, update the test case here.
@@ -66,10 +29,6 @@ public class AndroidSampleTest {
         List<AndroidElement> allProductsName = driver.findElementsByClassName(
                 "android.widget.TextView");
         assert(allProductsName.size() > 0);
-
-
-        // Invoke driver.quit() after the test is done to indicate that the test is completed.
-        driver.quit();
 
     }
 }
