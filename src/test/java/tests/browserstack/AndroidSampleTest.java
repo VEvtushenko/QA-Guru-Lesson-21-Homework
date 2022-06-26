@@ -15,8 +15,8 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.List;
 
-import static config.BrowserstackConnection.setCapabilities;
 import static drivers.AndroidBrowserstackDriver.initAndroidDriver;
+import static helpers.DriverSettings.setCapabilities;
 
 @Tag("android")
 public class AndroidSampleTest {
@@ -49,7 +49,7 @@ public class AndroidSampleTest {
 
         // Initialise the remote Webdriver using BrowserStack remote URL
         // and desired capabilities defined above
-        AndroidDriver<AndroidElement> driver = initAndroidDriver(setCapabilities(new File("src/test/resources/config/json/first.conf.json")));
+        AndroidDriver<AndroidElement> driver = initAndroidDriver(setCapabilities());
 
 
         // Test case for the BrowserStack sample Android app.

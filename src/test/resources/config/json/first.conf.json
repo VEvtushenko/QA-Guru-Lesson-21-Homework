@@ -8,7 +8,7 @@
     "build": "Junit5 Android First",
     "name": "first_test",
     "browserstack.debug": true,
-    "app": "bs://461269d9f1f7b5140fc6ba88416d3cc312d53271"
+    "app": "bs://c700ce60cf13ae8ed97705a55b8e022f13c5827c"
   },
 
   "environments": [{
