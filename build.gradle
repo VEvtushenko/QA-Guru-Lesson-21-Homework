@@ -8,8 +8,9 @@ repositories {
 }
 
 def allureVersion = '2.18.1',
-    selenideVersion = '6.6.3',
+//    selenideVersion = '6.6.3',
 //    appiumVersion = '8.1.1',
+    selenideVersion = '5.4.0',
     appiumVersion = "7.6.0",
     restAssured = '5.1.1',
     junitVersion = "5.8.2",
