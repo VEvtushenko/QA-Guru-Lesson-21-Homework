@@ -1,5 +1,6 @@
 package helpers;
 
+import config.BrowserstackConnection;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
@@ -15,6 +16,9 @@ public class DriverSettings {
 
     public static DesiredCapabilities setCapabilities() throws IOException, ParseException {
         DesiredCapabilities capabilities = new DesiredCapabilities();
+
+//        capabilities.setCapability("browserstack.user", BrowserstackConnection.config.username());
+//        capabilities.setCapability("browserstack.key",BrowserstackConnection.config.access_key());
 
         JSONParser parser = new JSONParser();
         JSONObject configJson = (JSONObject) parser.parse(new FileReader(jsonConfigFile));

@@ -22,34 +22,34 @@ import static helpers.DriverSettings.setCapabilities;
 public class AndroidSampleTest {
     @Test
     void searchTest() throws IOException, InterruptedException, ParseException {
-//        DesiredCapabilities caps = new DesiredCapabilities();
-//
-//        // Set your access credentials
-//        caps.setCapability("browserstack.user", "autotestscloud_qAejV5");
-//        caps.setCapability("browserstack.key", "DkvhzD6ZSLTsxYERedAR");
-//
-//        // Set URL of the application under test
-//        caps.setCapability("app", "bs://c700ce60cf13ae8ed97705a55b8e022f13c5827c");
-//
-//        // Specify device and os_version for testing
-//        caps.setCapability("device", "Google Pixel 3");
-//        caps.setCapability("os_version", "9.0");
-//
-//        // Set other BrowserStack capabilities
-//        caps.setCapability("project", "First Java Project");
-//        caps.setCapability("build", "browserstack-build-1");
-//        caps.setCapability("name", "first_test");
-//
-//
-//        // Initialise the remote Webdriver using BrowserStack remote URL
-//        // and desired capabilities defined above
-//        AndroidDriver<AndroidElement> driver = new AndroidDriver<AndroidElement>(
-//                new URL("http://hub-cloud.browserstack.com/wd/hub"), caps);
+        DesiredCapabilities caps = new DesiredCapabilities();
+
+        // Set your access credentials
+        caps.setCapability("browserstack.user", "bsuser_EgVqPB");
+        caps.setCapability("browserstack.key", "Ep1YKL4jfwWtLHd3V8jT");
+
+        // Set URL of the application under test
+        caps.setCapability("app", "bs://c700ce60cf13ae8ed97705a55b8e022f13c5827c");
+
+        // Specify device and os_version for testing
+        caps.setCapability("device", "Google Pixel 3");
+        caps.setCapability("os_version", "9.0");
+
+        // Set other BrowserStack capabilities
+        caps.setCapability("project", "First Java Project");
+        caps.setCapability("build", "browserstack-build-1");
+        caps.setCapability("name", "first_test");
 
 
         // Initialise the remote Webdriver using BrowserStack remote URL
         // and desired capabilities defined above
-        AndroidDriver<AndroidElement> driver = initAndroidDriver(setCapabilities());
+        AndroidDriver<AndroidElement> driver = new AndroidDriver<AndroidElement>(
+                new URL("http://hub-cloud.browserstack.com/wd/hub"), caps);
+
+
+        // Initialise the remote Webdriver using BrowserStack remote URL
+        // and desired capabilities defined above
+//        AndroidDriver<AndroidElement> driver = initAndroidDriver(setCapabilities());
 
 
         // Test case for the BrowserStack sample Android app.
