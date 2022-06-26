@@ -1,7 +1,7 @@
 {
-  "server": "hub.browserstack.com",
-  "username": "bsuser_EgVqPB",
-  "access_key": "Ep1YKL4jfwWtLHd3V8jT",
+  "server": "",
+  "username": "",
+  "access_key": "",
 
   "capabilities": {
     "project": "First Junit5 Android Project",
