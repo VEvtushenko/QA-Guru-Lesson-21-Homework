@@ -8,9 +8,9 @@ repositories {
 }
 
 def allureVersion = '2.18.1',
-//    appiumVersion = '8.1.1',
+    appiumVersion = '8.1.1',
     selenideVersion = '6.6.3',
-    appiumVersion = "7.6.0",
+//    appiumVersion = "7.6.0",
     restAssured = '5.1.1',
     junitVersion = "5.8.2",
     slf4jVersion = '1.7.36'
@@ -31,7 +31,7 @@ allure {
 
 dependencies {
     testImplementation(
-//            "com.codeborne:selenide:$selenideVersion",
+            "com.codeborne:selenide:$selenideVersion",
             "io.qameta.allure:allure-selenide:$allureVersion",
             "io.appium:java-client:$appiumVersion",
             "io.rest-assured:rest-assured:$restAssured",
