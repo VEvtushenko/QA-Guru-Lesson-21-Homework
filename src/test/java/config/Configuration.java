@@ -13,5 +13,5 @@ public interface Configuration extends Config  {
   String os_version();
   String project();
   String build();
-  String name();
+  String test_name();
 }
