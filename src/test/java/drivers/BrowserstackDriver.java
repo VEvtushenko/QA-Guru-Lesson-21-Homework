@@ -25,12 +25,12 @@ public class BrowserstackDriver implements WebDriverProvider {
 
         // Specify device and os_version for testing
         mutableCapabilities.setCapability("device", BrowserstackConnection.config.device());
-        mutableCapabilities.setCapability("os_version", BrowserstackConnection.config.os_version());
+        mutableCapabilities.setCapability("os_version", BrowserstackConnection.config.osVersion());
 
         // Set other BrowserStack capabilities
         mutableCapabilities.setCapability("project", BrowserstackConnection.config.project());
         mutableCapabilities.setCapability("build", BrowserstackConnection.config.build());
-        mutableCapabilities.setCapability("name", BrowserstackConnection.config.test_name());
+        mutableCapabilities.setCapability("name", BrowserstackConnection.config.testName());
 
         return new RemoteWebDriver(getBrowserstackUrl(), mutableCapabilities);
     }
@@ -39,7 +39,7 @@ public class BrowserstackDriver implements WebDriverProvider {
         try {
             return new URL("http://" +
                     BrowserstackConnection.config.username() + ":" +
-                    BrowserstackConnection.config.access_key() + "@" +
+                    BrowserstackConnection.config.accessKey() + "@" +
                     BrowserstackConnection.config.server() +
                     "/wd/hub");
         } catch (MalformedURLException e) {

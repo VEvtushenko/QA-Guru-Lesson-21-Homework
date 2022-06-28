@@ -7,13 +7,13 @@ import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 import static io.restassured.RestAssured.given;
 import static java.lang.String.format;
 
-public class BrowserstackProperties {
+public class BrowserstackApp {
 
     public static String videoUrl(String sessionId) {
         String url = format("https://api.browserstack.com/app-automate/sessions/%s.json", sessionId);
 
         return given()
-                .auth().basic(BrowserstackConnection.config.username(), BrowserstackConnection.config.access_key())
+                .auth().basic(BrowserstackConnection.config.username(), BrowserstackConnection.config.accessKey())
                 .log().all()
                 .when()
                 .get(url)

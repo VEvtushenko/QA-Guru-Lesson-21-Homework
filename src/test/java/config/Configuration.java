@@ -7,11 +7,14 @@ import org.aeonbits.owner.Config;
 public interface Configuration extends Config  {
   String server();
   String username();
-  String access_key();
+  @Key("access_key")
+  String accessKey();
   String app();
   String device();
-  String os_version();
+  @Key("os_version")
+  String osVersion();
   String project();
   String build();
-  String test_name();
+  @Key("test_name")
+  String testName();
 }

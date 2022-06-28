@@ -11,7 +11,7 @@ import org.junit.jupiter.api.BeforeEach;
 
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.logevents.SelenideLogger.addListener;
-import static helpers.BrowserstackProperties.sessionId;
+import static helpers.BrowserstackApp.sessionId;
 import static io.qameta.allure.Allure.step;
 
 public class TestBase {
@@ -35,10 +35,9 @@ public class TestBase {
         Attachments.screenshotAs("Last screenshot");
         Attachments.pageSource();
 
-        Attachments.video(sessionId);
-
         step("Close driver", Selenide::closeWebDriver);
 
+        Attachments.video(sessionId);
     }
 
 }
